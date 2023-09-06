@@ -30,7 +30,7 @@ const AccordionQuestions = ({ questions, userAnswers }) => {
                         >
                             <div className="accordion-body">
                                 <p dangerouslySetInnerHTML={{ __html: `Question: ${question.question}` }} />
-                                <p dangerouslySetInnerHTML={{ __html: `Your Answer: ${userAnswers[index]}` }} />
+                                <p dangerouslySetInnerHTML={{ __html: `Your Answer: ${userAnswers[index] || ' '}` }} />
                                 <p dangerouslySetInnerHTML={{ __html: `Correct Answer: ${question.correct_answer}` }} />
                             </div>
                         </div>
