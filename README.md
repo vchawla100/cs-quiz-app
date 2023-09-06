@@ -1,7 +1,5 @@
 # Quiz App
 
-![Login-page](image.png)
-![Quiz](image-1.png)
 
 ## Description
 

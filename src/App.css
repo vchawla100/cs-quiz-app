@@ -1,38 +1,171 @@
-.App {
-  text-align: center;
+/* Misc */
+
+#quiz-mic {
+    height: 10rem;
+    width: 10rem;
+    position: absolute;
+    bottom: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.alert {
+    bottom: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#main-container {
+    width: 100%;
+    background-color: #edf5e1;
+    overflow: auto;
+    position: relative
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar {
+    height: 10vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-brand:hover {
+    cursor: pointer;
+}
+
+#nav-props {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#email-ip {
+    width: 100%;
+    min-width: 6rem;
+}
+
+.app {
+    height: 90vh;
+}
+
+.start-page {
+    width: 60vw;
+}
+
+
+/* overview panel */
+
+.overview-panel {
+    display: flex;
+    justify-content: center;
+}
+
+.question-status-container {
+    display: flex;
+}
+
+.question-status {
+    width: 30px;
+    height: 30px;
+    border: 1.5px solid #7e7b7b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #393838;
+    color: darkgray;
+}
+
+.question-status.current {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.question-status.answered {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.question-status.visited {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.question-status:not(.answered):not(.visited):hover {
+    background-color: #cccccc;
+    color: #000;
+}
+
+
+/* Question */
+
+.question {
+    height: 45vh;
+    overflow: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 20px 0;
+    scrollbar-width: none;
+}
+
+.question::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.question h2 {
+    margin-bottom: 10px;
+}
+
+.choice {
+    width: fit-content;
+    transition: background-color 0.5s ease;
+    /* Transition background-color over 0.3 seconds with ease timing function */
+}
+
+.choice.selected {
+    border-radius: 4px;
+    background-color: #aae14a;
+    color: #000000;
+}
+
+.choice:hover {
+    cursor: pointer;
+}
+
+
+/* ReportPage */
+
+.report-page {
+    width: 100%;
+    height: 80%;
+    flex-direction: column;
+}
+
+#accordCont {
+    width: 70%;
+    overflow: auto;
+}
+
+#accordCont::-webkit-scrollbar-thumb {
+    background-color: rgb(176, 247, 146);
+    outline: 1px solid rgb(147, 198, 155);
+}
+
+#accordCont::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+#accordCont::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(10, 122, 94, 0.3);
+}
+
+button[char="incorrect"] {
+    background-color: rgb(237, 87, 87);
+}
+
+button[char="correct"] {
+    background-color: rgb(134, 233, 120);
 }
