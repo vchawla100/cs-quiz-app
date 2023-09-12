@@ -16,8 +16,8 @@ const Statistics = ({ questions, userAnswers }) => {
 
     return (
         <Segment>
-            <Grid columns={3} divided>
-                <Grid.Row stretched>
+            <Grid columns={3} divided className='cont'>
+                <Grid.Row stretched >
                     <Grid.Column>
                         <Header as="h1" textAlign="center" block>
                             {remarks}
